@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerStoreLocationsArray">
+        <item>Nangka</item>
+        <item>Concepcion Uno</item>
+        <item>Tumana</item>
+        <item>Parang</item>
+        <item>San Mateo</item>
+        <item>Cainta</item>
+    </string-array>
+</resources>

@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.KapèPH" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/brown_01</item>
+        <item name="colorPrimaryVariant">@color/brown_01</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/peach_02</item>
+        <item name="colorSecondaryVariant">@color/peach_02</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/sora</item>
+
+        <item name="android:textColor">@null</item>
+        <item name="android:textColorPrimary">@null</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorHint">@color/text_light_grey</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/sora_semibold</item>
+        <item name="searchIcon">@drawable/search</item>
+    </style>
+
+    <style name="buttonTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_gray_04</item>
+        <item name="colorOnPrimary">@color/brown_01</item>
+    </style>
+
+    <style name="SpinnerItemStyle">
+        <item name="android:textColor">@color/white_05</item>
+    </style>
+
+</resources>

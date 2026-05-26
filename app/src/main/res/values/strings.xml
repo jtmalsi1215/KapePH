@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Kapè PH</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_location">Location</string>
+    <string name="text_location_description">OLFU, Antipolo</string>
+    <string name="img_desc__arrow_down">arrow_down</string>
+    <string name="filetbutton">FiletButton</string>
+    <string name="prod_caffee_mocha">Caffee Mocha</string>
+    <string name="price_product1">₱100</string>
+    <string name="text_prod_category_deep_foam">Deep Foam</string>
+    <string name="text_category_ice_hot">Ice/Hot</string>
+    <string name="text_mocha_fusi">Mocha Fusi</string>
+    <string name="caffee_mocha_price">₱ 80</string>
+    <string name="text_prod_category_espresso">Espresso</string>
+    <string name="price_mocha_fusi">₱150</string>
+    <string name="price_caffe_panna">₱200</string>
+    <string name="caffee_mocha">Caffee Mocha</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="get_started">Get Started</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="deliver">Deliver</string>
+    <string name="pick_up">Pick Up</string>
+    <string name="default_web_client_id" translatable="false">266051215176-v1cold9ckq160g46jpujcc050tle9ksr.apps.googleusercontent.com</string>
+    <string name="profile">Profile</string>
+</resources>

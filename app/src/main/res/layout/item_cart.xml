@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/cart_item_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/caffee_mocha" /> <!-- Example placeholder -->
+
+    <TextView
+        android:id="@+id/cart_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/cart_item_remove_button"
+        app:layout_constraintStart_toEndOf="@+id/cart_item_image"
+        app:layout_constraintTop_toTopOf="@+id/cart_item_image"
+        tools:text="Caffe Mocha" />
+
+    <TextView
+        android:id="@+id/cart_item_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?attr/textAppearanceListItemSecondary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/cart_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/cart_item_name"
+        tools:text="Size: M" />
+
+    <TextView
+        android:id="@+id/cart_item_price_per_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?attr/textAppearanceListItemSecondary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/cart_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/cart_item_size"
+        tools:text="₱120 / unit" />
+
+    <ImageButton
+        android:id="@+id/cart_item_decrease_quantity"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Decrease quantity"
+        android:src="@drawable/ic_remove_circle_outline"
+        app:layout_constraintStart_toStartOf="@+id/cart_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/cart_item_price_per_unit"/>
+
+    <!-- You'll need this drawable -->
+    <!-- app:layout_constraintEnd_toStartOf="@+id/cart_item_quantity"
+    app:layout_constraintTop_toBottomOf="@+id/cart_item_price_per_unit" -->
+    <!-- Positioning these quantity controls can be tricky, adjust as needed -->
+    <!-- Let's try placing them at the bottom of the image for now -->
+
+
+
+    <TextView
+        android:id="@+id/cart_item_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:minWidth="30dp"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_item_decrease_quantity"
+        app:layout_constraintStart_toEndOf="@+id/cart_item_decrease_quantity"
+        app:layout_constraintTop_toTopOf="@+id/cart_item_decrease_quantity"
+        tools:text="2" />
+
+    <ImageButton
+        android:id="@+id/cart_item_increase_quantity"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Increase quantity"
+        app:layout_constraintStart_toEndOf="@+id/cart_item_quantity"
+        app:layout_constraintTop_toTopOf="@+id/cart_item_decrease_quantity"
+        android:src="@drawable/ic_add_circle_outline" />
+
+    <!-- You'll need this drawable -->
+    <!-- app:layout_constraintStart_toEndOf="@+id/cart_item_quantity"
+    app:layout_constraintTop_toTopOf="@+id/cart_item_quantity" -->
+
+
+
+    <ImageButton
+        android:id="@+id/cart_item_remove_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Remove item from cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cart_item_name"
+        android:src="@drawable/ic_delete" /> <!-- You'll need this drawable (e.g., a trash can icon) -->
+
+
+
+    <TextView
+        android:id="@+id/cart_item_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart_item_remove_button"
+        tools:text="₱240" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

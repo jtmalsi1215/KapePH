@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <ImageView
+        android:id="@+id/order_summary_item_image"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="2:3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:srcCompat="@drawable/caffee_mocha"
+        android:contentDescription="Product image in order summary" />
+
+    <TextView
+        android:id="@+id/order_summary_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/sora_semibold"
+        android:textColor="@color/text_black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/order_summary_item_total_price_for_item"
+        app:layout_constraintStart_toEndOf="@+id/order_summary_item_image"
+        app:layout_constraintTop_toTopOf="@+id/order_summary_item_image"
+        tools:text="Caffe Mocha Very Long Name" />
+
+    <TextView
+        android:id="@+id/order_summary_item_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/text_light_grey"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/order_summary_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/order_summary_item_name"
+        app:layout_constraintEnd_toEndOf="@+id/order_summary_item_name"
+        tools:text="Size: M, Qty: 2"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/order_summary_item_total_price_for_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sora_semibold"
+        android:textColor="@color/text_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/order_summary_item_name"
+        app:layout_constraintBottom_toBottomOf="@+id/order_summary_item_details"
+        tools:text="₱240.00" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

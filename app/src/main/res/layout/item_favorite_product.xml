@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fav_item_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"> <!-- For item click ripple -->
+
+        <ImageView
+            android:id="@+id/fav_product_image"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:srcCompat="@drawable/caffee_mocha"
+            android:contentDescription="Favorite product image" />
+
+        <TextView
+            android:id="@+id/fav_product_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/sora_semibold"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/fav_product_image"
+            app:layout_constraintTop_toTopOf="@+id/fav_product_image"
+            app:layout_constraintEnd_toStartOf="@+id/fav_button_unfavorite"
+            tools:text="Caffe Mocha Deluxe Title" />
+
+        <TextView
+            android:id="@+id/fav_product_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="@color/text_light_grey"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/fav_product_name"
+            app:layout_constraintTop_toBottomOf="@+id/fav_product_name"
+            app:layout_constraintEnd_toEndOf="@+id/fav_product_name"
+            tools:text="Deep Foam" />
+
+        <TextView
+            android:id="@+id/fav_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/sora_semibold"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            android:textColor="@color/brown_01"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/fav_product_name"
+            app:layout_constraintTop_toBottomOf="@+id/fav_product_description"
+            tools:text="P100" />
+
+        <ImageButton
+            android:id="@+id/fav_button_unfavorite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/heart_clicked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Unfavorite this item" />
+
+        <Button
+            android:id="@+id/fav_button_add_to_cart"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:text="Add to Cart"
+            android:textSize="12sp"
+            app:icon="@drawable/bag"
+            app:iconPadding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fav_product_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

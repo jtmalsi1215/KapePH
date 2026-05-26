@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "266051215176",
+    "project_id": "kapeph-a49bd",
+    "storage_bucket": "kapeph-a49bd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266051215176:android:a5173e81a6bb7b5b265d7d",
+        "android_client_info": {
+          "package_name": "com.example.kapph"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266051215176-tpt4dofsie96rupmfvqnn02kq3lbt17n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kapph",
+            "certificate_hash": "bb69276f47e9ffed0cbe3df3fb4143b0b2faa292"
+          }
+        },
+        {
+          "client_id": "266051215176-v1cold9ckq160g46jpujcc050tle9ksr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXDQ3QRiJBmKivQZZ1sFbOiv6JWJMfNlE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266051215176-v1cold9ckq160g46jpujcc050tle9ksr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="leftPadding" type="id" />
+    <item name="rightPadding" type="id" />
+    <item name="guide_image_home_banner" type="id" />
+    <item name="image_home_banner" type="id" />
+    <item name="container_loc_and_profile" type="id" />
+    <item name="text_location_header" type="id" />
+    <item name="text_location_description" type="id" />
+    <item name="imageView2" type="id" />
+    <item name="guide_search_view" type="id" />
+</resources>

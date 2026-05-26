@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftPadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightPadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <ImageView
+            android:id="@+id/image_black_banner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Banner background"/>
+
+        <LinearLayout
+            android:id="@+id/container_loc_and_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="66dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_location_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/text_location"
+                android:textColor="@color/text_light_grey"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinnerStoreLocations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/spinnerStoreLocationsArray"
+                    android:popupBackground="#2a2a2a"
+                    android:popupElevation="5dp"
+                    android:background="@drawable/spinner_no_arrow"
+                    style="@style/SpinnerItemStyle"/>
+
+                <ImageView
+                    android:id="@+id/arrowDownLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/img_desc__arrow_down"
+                    android:src="@drawable/arrow_down" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/drawerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/menu"
+            app:layout_constraintEnd_toStartOf="@+id/rightPadding"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Open navigation drawer" />
+
+        <!-- Your existing SearchView -->
+        <androidx.appcompat.widget.SearchView
+            app:iconifiedByDefault="false"
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_drawable"
+        app:queryHint="Search Coffee"
+        app:searchIcon="@drawable/search"
+        android:theme="@style/CustomSearchView"
+        app:layout_constraintEnd_toStartOf="@id/filetButton"
+        app:layout_constraintStart_toStartOf="@id/leftPadding"
+        app:layout_constraintTop_toBottomOf="@id/container_loc_and_profile" />
+
+        <ImageButton
+            android:id="@+id/filetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/filetbutton"
+            android:src="@drawable/filet"
+            app:layout_constraintEnd_toEndOf="@id/rightPadding"
+            app:layout_constraintTop_toTopOf="@id/search_bar"
+            app:layout_constraintBottom_toBottomOf="@id/search_bar"/>
+
+        <ImageView
+            android:id="@+id/image_home_banner_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/banner"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="@id/rightPadding"
+            app:layout_constraintStart_toStartOf="@id/leftPadding"
+            app:layout_constraintTop_toBottomOf="@+id/search_bar"
+            android:contentDescription="Promotional banner"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/product_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="15dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/rightPadding"
+            app:layout_constraintStart_toStartOf="@id/leftPadding"
+            app:layout_constraintTop_toBottomOf="@id/image_home_banner_1"
+            tools:listitem="@layout/item_product" />
+
+        <!-- TextView for "No results" message -->
+        <TextView
+            android:id="@+id/text_view_no_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No coffee found matching your search."
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:background="@drawable/search_view_background"
+        app:layout_constraintTop_toBottomOf="@+id/image_home_banner_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftPadding"
+        app:layout_constraintEnd_toEndOf="@id/rightPadding"
+        android:layout_marginTop="32dp"
+        tools:visibility="visible"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
